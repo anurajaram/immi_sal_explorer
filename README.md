@@ -1,5 +1,6 @@
 # immi_sal_explorer
-Final week assignment for Coursera class on 'Developing Data Products'. The Shiny app is a Salary Explorer tool for Highly-skilled Immigrant.
+Final week assignment for Coursera class on 'Developing Data Products'. <br />
+This Shiny app is a Salary Explorer tool for Highly-skilled Immigrant.
 <br /><br />
 
 <span style="color:blue"><h1>Part 1: Create the Shiny App</h1></span>
