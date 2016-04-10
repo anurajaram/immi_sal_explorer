@@ -13,7 +13,7 @@ Description - <br />
 <li>App shows three different charts based on user selection from a 'dropdown box'.</li>
 <li>App also calculated the count of visa applications, based on user selection for 'visa-type'. </li>
 </ul>
-<br /><br />
+<br />
  
 <h1>Part 2: Pitch Presentation using Rstudio Presenter</h1>
 Presentation Tool - Rstudio Presenter<br />
