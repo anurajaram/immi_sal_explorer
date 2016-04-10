@@ -1,0 +1,62 @@
+Coursera Project Presentation
+========================================================
+Salary Explorer tool for Highly-skilled <br>
+Immigrant Workers
+
+Author: Anupama Rajaram <br />
+Date: April 8, 2016 <br />
+
+<a href = "https://anurajaram.shinyapps.io/immi_sal_explorer/">
+Weblink for Shiny app - Immi_sal_explorer </a>
+
+
+
+Shiny App = immi_sal_explorer
+========================================================
+
+App Screenshot <br />
+![alt text](shiny_app_screen.jpg)
+
+*** 
+Chart Selection Options  
+- Salary by State
+- Salary by Education
+- Visa applications by job_title
+
+
+attach(sal_data)
+
+Salary Dataset Sample Preview
+========================================================
+```{r, echo=FALSE}
+library(ggplot2)
+
+sal_data <- read.csv("salary.csv", header = TRUE)
+op_table <- sal_data[, c("VISA_CLASS",
+                         "PAID_WAGE_PER_YEAR", "JOB_TITLE_SUBGROUP")]
+colnames(op_table) = c( 'Visa', 'Salary', 'Title')
+head(op_table)
+
+
+```
+
+Salary by Education
+========================================================
+
+```{r, echo=FALSE}
+boxplot(PAID_WAGE_PER_YEAR~ EDUCATION_LEVEL_REQUIRED, data=sal_data,
+          col=(c("gold","darkgreen")),
+          # specifying some color
+          main="Median Salary by Education level", 
+          xlab="Visa Class", ylab="Annual Salary")
+
+```
+
+
+Salary Insights
+========================================================
+- Maximum no. of applications are H1-B type.
+- Majority of H1-Bs are for asst. professors, attorneys and software engineers.
+- DE & NY had the most number of outliers, where applicant salaries were significantly higher than median salary.
+- Masters' students had the highest median salary.<br /> 
+(Education = 'Other' implies employees with less education but many years of experience.)
